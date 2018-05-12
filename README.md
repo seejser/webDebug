@@ -12,3 +12,18 @@ debug:在文本框input加样式：
 ```
 style="line-height:normal;"
 ```
+2.android click事件不起作用
+代码：
+```
+   $(".spirit_info").click( {
+        console.log('spirit_info')
+
+    });
+```
+dubug:
+```
+   $(".spirit_info").on('click',function () {
+        console.log('spirit_info')
+
+    });
+```
