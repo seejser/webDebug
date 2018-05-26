@@ -62,8 +62,8 @@ HTML5在开发时，经常遇到各种问题，留白遮罩就是一种常见的
 4.微信下html页面，键盘弹出，页面变形
 
 总结一下安卓下面解决input键盘弹出导致页面压缩变形的方法：
-1.不对input使用绝对定位，使用绝对定位会脱离文档流导致在安卓上被压缩变形。
-2.
+1）.不对input使用绝对定位，使用绝对定位会脱离文档流导致在安卓上被压缩变形。
+2）.
 写个监听resize事件
 ```
 var HEIGHT = $('body').height();
@@ -73,5 +73,17 @@ var HEIGHT = $('body').height();
 ```
 当键盘弹出的时候，重置为原来的高度
 
-3.最外层容器用js设置为屏幕宽高，这样键盘弹出也没事,Height不能写成百分比，得写成固定数值，通过js获取当前设备的height.
+3）.最外层容器用js设置为屏幕宽高，这样键盘弹出也没事,Height不能写成百分比，得写成固定数值，通过js获取当前设备的height.
+5.解决安卓端微信页面长按时出现浏览器选择打开问题
+
+```
+document.oncontextmenu=function(e){  
+    //或者return false;  
+    e.preventDefault();  
+}; 
+```
+IOS 下的类似问题解决：
+```
+-webkit-user-select: none;
+```
 
