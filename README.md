@@ -74,6 +74,8 @@ var HEIGHT = $('body').height();
 当键盘弹出的时候，重置为原来的高度
 
 3）.最外层容器用js设置为屏幕宽高，这样键盘弹出也没事,Height不能写成百分比，得写成固定数值，通过js获取当前设备的height.
+
+
 5.解决安卓端微信页面长按时出现浏览器选择打开问题
 
 ```
@@ -82,13 +84,19 @@ document.oncontextmenu=function(e){
     e.preventDefault();  
 }; 
 ```
+
 IOS 下的类似问题解决：
+
 ```
 -webkit-user-select: none;
 ```
+
 6.swiper 组件bug
+
 当swiper-container 或者其父元素隐藏后被重启时，swiper loop出现空白
+
 ```
+
 var mySwiper = new Swiper('.swiper-container',{
     pagination: {
       el: '.swiper-pagination',
