@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="用户屏幕分辨率以及屏幕尺寸，屏幕可视区域大小位置的方法">
+    <meta name="author" content="用户屏幕分辨率以及屏幕尺寸，屏幕可视区域大小位置的方法">
+    <title>Test</title>
+</head>
+
+<body>
+    <div style="width:1cm;" id="hutia"></div>
+    <SCRIPT LANGUAGE="JavaScript">
+        document.write('您的显示器分辨率为:\n' + screen.width + '*' + screen.height + ' pixels<br/>');
+        var ww = document.getElementById("hutia").offsetWidth, w = screen.width / ww, h = screen.height / ww, r = Math.round(Math.sqrt(w * w + h * h) / 2.54);
+        document.write('您的显示器尺寸为:\n' + (screen.width / ww).toFixed(1) + '*' + (screen.height / ww).toFixed(1) + ' cm, ' + r + '寸<br/>'); 
+        document.write('您的显示区域为:\n' + document.documentElement.clientWidth + '*' + document.documentElement.clientHeight + ' px, '  + '<br/>'); 
+    </SCRIPT>
+</body>
+
+</html>
