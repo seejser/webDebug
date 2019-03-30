@@ -90,7 +90,35 @@ IOS 下的类似问题解决：
 ```
 -webkit-user-select: none;
 ```
-
+移动端-webkit-user-select:none导致input/textarea输入框无法输入
+移动端webview中写页面的时候发现个别Android机型会导致input、textareat输入框无法输入（键盘可以弹起，不是webView.requestFocus(View.FOCUS_DOWN);的问题）
+由于移动端我习惯统一初始化样式：
+```
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  outline: none;
+}
+```
+经过试错发现是-webkit-user-select:none;所导致的原因 
+当然如果你确实需要这个-webkit-user-select这个属性，css初始化代码改写为如下即可：
+```
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+*:not(input,textarea) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+} 
+```
 6.swiper 组件bug
 
 当swiper-container 或者其父元素隐藏后被重启时，swiper loop出现空白
