@@ -168,6 +168,8 @@ background-color: #ff5500;
 ```
 
 9.科学上最令人舒服的十种颜色（RGB）
+
+```
 █ █ █ █ █
 19CAAD    8CC7B5    A0EEE1    BEE7E9    BEEDC7
 1.R 25 G 202 B 173 
@@ -182,5 +184,5 @@ D6D5B7    D1BA74    E6CEAC    ECAD9E    F4606C
 8.R 230 G 206 B 172
 9.R 236 G 173 B 158
 10.R 244 G 96 B 108
-————————————————
+```
 
